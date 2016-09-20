@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>differ-不同</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        background: #F1F3FA;
+    }
+    /* Profile container */
+    
+    .profile {
+        margin: 20px 0;
+    }
+    /* Profile sidebar */
+    
+    .profile-sidebar {
+        padding: 20px 0 10px 0;
+        background: #fff;
+    }
+    
+    .profile-userpic img {
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+        -webkit-border-radius: 50% !important;
+        -moz-border-radius: 50% !important;
+        border-radius: 50% !important;
+    }
+    
+    .profile-usertitle {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .profile-usertitle-name {
+        color: #5a7391;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+    
+    .profile-usertitle-job {
+        text-transform: uppercase;
+        color: #5b9bd1;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .profile-userbuttons {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .profile-userbuttons .btn {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 6px 15px;
+        margin-right: 5px;
+    }
+    
+    .profile-userbuttons .btn:last-child {
+        margin-right: 0px;
+    }
+    
+    .profile-usermenu {
+        margin-top: 30px;
+    }
+    
+    .profile-usermenu ul li {
+        border-bottom: 1px solid #f0f4f7;
+    }
+    
+    .profile-usermenu ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .profile-usermenu ul li a {
+        color: #93a3b5;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    .profile-usermenu ul li a i {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+    
+    .profile-usermenu ul li a:hover {
+        background-color: #fafcfd;
+        color: #5b9bd1;
+    }
+    
+    .profile-usermenu ul li.active {
+        border-bottom: none;
+    }
+    
+    .profile-usermenu ul li.active a {
+        color: #5b9bd1;
+        background-color: #f6f9fb;
+        border-left: 2px solid #5b9bd1;
+        margin-left: -2px;
+    }
+    /* Profile Content */
+    
+    .profile-content {
+        padding: 20px;
+        background: #fff;
+        min-height: 460px;
+    }
+    
+    .material-switch > input[type="checkbox"] {
+        display: none;
+    }
+    
+    .material-switch > label {
+        cursor: pointer;
+        height: 0px;
+        position: relative;
+        width: 40px;
+    }
+    
+    .material-switch > label::before {
+        background: rgb(0, 0, 0);
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        content: '';
+        height: 16px;
+        margin-top: -8px;
+        position: absolute;
+        opacity: 0.3;
+        transition: all 0.4s ease-in-out;
+        width: 40px;
+    }
+    
+    .material-switch > label::after {
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        content: '';
+        height: 24px;
+        left: -4px;
+        margin-top: -8px;
+        position: absolute;
+        top: -4px;
+        transition: all 0.3s ease-in-out;
+        width: 24px;
+    }
+    
+    .material-switch > input[type="checkbox"]:checked + label::before {
+        background: inherit;
+        opacity: 0.5;
+    }
+    
+    .material-switch > input[type="checkbox"]:checked + label::after {
+        background: inherit;
+        left: 20px;
+    }
+    .lockpos{
+      margin:0 10%;
+    }
+    </style>
+    <script href="js/jquery-1.11.1.min.js"></script>
+    <script href="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    window.alert = function() {};
+    var defaultCSS = document.getElementById('bootstrap-css');
+
+    function changeCSS(css) {
+        if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+        else $('head > link').filter(':first').replaceWith(defaultCSS);
+    }
+    $(document).ready(function() {
+        var iframe_height = parseInt($('html').height());
+        window.parent.postMessage(iframe_height, 'http://www.bootsnipp.com');
+    });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row profile">
+            <div class="col-md-3">
+                   <!-- user profile-->
+                <div class="profile-sidebar">
+             
+                    <div class="profile-userpic">
+                        <img src="img/gf.jpeg" class="img-responsive" alt="profile picture">
+                    </div>
+
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            gfgf
+                        </div>
+                        <div class="profile-usertitle-job">
+                            dev-web
+                        </div>
+                    </div>
+                    <!-- profile lock -->
+                    <div class="center lockpos">
+                        LOCK
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox" />
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </div>
+                    <!-- siderbar menu-->
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-home"></i> Dsahboard </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i> Profile </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="profile-content">
+                    <h1>郑高方</h1>
+                    <hr />
+                    <h4>个人概要</h4>
+                    <p>&emsp;&emsp;郑高方&emsp;男&emsp;籍贯陕西&emsp;现居北京&emsp;武汉大学&emsp;本科&emsp;软件工程专业&emsp;2016年毕业</p>
+                    <p>&emsp;&emsp;手机:17010284096&emsp;邮箱:<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=BWNka2IraGRsaUVjan1oZGxpK2ZqaA">fang.mail@foxmail.com</a></p>
+                    <h4>实践经历</h4>
+                    <p>武汉百纳信息有限公司－海豚浏览器产品部－<code>前端开发工程师(intern)</code></p>
+                    <ul>
+                        <li>宇航节h5运营页面制作,包括动画和交互效果的实现</li>
+                        <li>theme store和web应用模块新控制台的前端页面实现和联合测试</li>
+                        <li>根据demo实现海豚浏览器新版本home design的首页游戏模块game center页面</li>
+                    </ul>
+                    <p>高效院系本科教学状态评估实践展示平台（网站）</p>
+                    <ul>
+                        <li>这是一个用于展示教学研究成果的平台网站，主要以PDF材料展示、教学成果链接展示、视频展示、图片展示的形式向外部提供信息展示的平台。独立设计开发利用Html＋css＋js实现的静态网站项目</li>
+                        <li>独立设计开发利用Html＋css＋js实现的静态网站项目</li>
+                    </ul>
+                    <p> 大陆汽车公司内部交流平台项目（网站）</p>
+                    <ul>
+                        <li>这是一个基于ASP.NET技术的汽车公司内部交流网站，包含总公司主系统、分公司子系统、合作商子系统；可以完成公司员工的信息录入，公司产品、项目的展示，公司信息通知的发布、文档交流以及员工间的互动交流</li>
+                        <li>在项目组中担任team leader，参与系统的架构设计，并基于bootstrap框架设计实现所有的前端页面</li>
+                    </ul>
+                    <p>国家数字文化资源服务平台（网站）</p>
+                    <ul>
+                        <li>这是一个资源集中型数字图书馆系统，资源类型囊括图书、期刊、图片、视频、音频；为普通用户、大型机构用户提供数字图书借阅、购买以及定制化的数字图书服务</li>
+                        <li>在项目中负责机构用户子系统模块和网站导航模块的前端页面设计实现，参与设计文档、测试文档撰写</li>
+                    </ul>
+                    <h4>专业技能</h4>
+                    <p><code>HTML</code>&emsp;<code>CSS</code>&emsp;<code>JS</code>&emsp;<code>Less</code>&emsp;<code>Node.js</code></p>
+                    <ul>
+                        <li>熟悉html和w3c标准，能够书写结构清晰，易于维护的html结构，掌握css＋div，能够在视觉设计的基础上进行网页布局和样式还原</li>
+                        <li>熟悉javascript，掌握jquery等主流js框架，理解ajax工作原理，了解bootstrap框架</li>
+                        <li>了解html5+css3，能够进行移动端web页面的开发</li>
+                        <li>了解主流浏览器的兼容性问题，能够保证页面在主流浏览器上的正常显示</li>
+                        <li>英语综合能力良好，可以进行文档阅读和一定量的英语交流</li>
+                    </ul>
+                    <h4>职业规划</h4>
+                    <p>&emsp;&emsp;选择从事web前端开发相关职位源于我对这方面的兴趣和学习经历，参与到了多次的实践项目和实习让我学习到了很多前端知识、积累了不少开发经验、了解认识到了很多易用的框架和开发工具，提高了开发效率。同时也认识到了自己在整个前端领域的学习进度和方向，我希望不断实践学习，更加熟练掌握开发技能，提高开发效率，尽自己之力推动公司发展</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--     <center>
+        <strong><span>gfgf</span></strong>
+    </center>
+ -->
+</body>
+
+</html>
